@@ -4,7 +4,7 @@
 class Airplane : public Vehicle
 {
 private:
-	float Altitude = 0.0f;
+	float Altitude_ = 0.0f;
 
 public:
 	Airplane(std::string brand, int year = 1900, float miles = 0.0f, float altitude = 0.0f);

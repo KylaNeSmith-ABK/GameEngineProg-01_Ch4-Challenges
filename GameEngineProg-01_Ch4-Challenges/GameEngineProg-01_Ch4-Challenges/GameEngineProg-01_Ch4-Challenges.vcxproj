@@ -131,12 +131,14 @@
     <ClCompile Include="Boat.cpp" />
     <ClCompile Include="Car.cpp" />
     <ClCompile Include="GameEngineProg-01_Ch4-Challenges.cpp" />
+    <ClCompile Include="LargestValue.cpp" />
     <ClCompile Include="Vehicle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Airplane.h" />
     <ClInclude Include="Boat.h" />
     <ClInclude Include="Car.h" />
+    <ClInclude Include="LargestValue.h" />
     <ClInclude Include="Vehicle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

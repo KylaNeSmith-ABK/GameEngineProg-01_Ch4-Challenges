@@ -2,8 +2,8 @@
 
 Car::Car(std::string brand, int year, float miles, E_CAR_TYPE carType, bool isAllTerrain)
 	: Vehicle(brand, year, miles)
-	, bIsAllTerrain(isAllTerrain)
-	, CarType(carType)
+	, bIsAllTerrain_(isAllTerrain)
+	, CarType_(carType)
 {
 }
 
@@ -14,9 +14,9 @@ Car::~Car()
 void Car::Display()
 {
 	Vehicle::Display();
-	std::cout << "Is all-terrain: " << std::boolalpha << bIsAllTerrain << std::boolalpha << std::endl;
+	std::cout << "Is all-terrain: " << std::boolalpha << bIsAllTerrain_ << std::boolalpha << std::endl;
 	std::cout << "Car type: ";
-	switch (CarType)
+	switch (CarType_)
 	{
 		case ELECTRIC:
 			std::cout << "Electric" << std::endl;;
@@ -35,12 +35,12 @@ void Car::Display()
 
 std::string Car::SoundEffect()
 {
-	if (Brand.compare("Mazda") == 0)
+	if (Brand_.compare("Mazda") == 0)
 	{
 		return "zoom zoom";
 	}
 
-	switch (CarType)
+	switch (CarType_)
 	{
 		case ELECTRIC:
 			return "voom voom";

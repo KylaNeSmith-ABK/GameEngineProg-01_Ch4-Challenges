@@ -5,29 +5,15 @@
 #include "Boat.h"
 #include "Airplane.h"
 
-int LargestValue(int intArr[], int arrSize);
+#include "LargestValue.h"
+
+void LargestValueTest();
 
 int main()
 {
     std::cout << "-- LARGEST VALUE OF AN ARRAY --" << std::endl;
 
-    constexpr int ArrSize = 12;
-    int IntArr[ArrSize] { 0 };
-
-    std::cout << "Array is ";
-    for (int i = 0; i < ArrSize; i++)
-    {
-        IntArr[i] = rand() % 100;
-        std::cout << IntArr[i];
-        if (i < ArrSize - 1)
-        {
-            std::cout << ", ";
-        }
-    }
-
-    std::cout << std::endl;
-
-    std::cout << "Largest value is " << LargestValue(IntArr, ArrSize);
+    LargestValueTest();
 
     std::cout << std::endl;
     std::cout << std::endl;
@@ -78,17 +64,23 @@ int main()
     std::cout << std::endl;
 }
 
-int LargestValue(int intArr[], int arrSize)
+void LargestValueTest()
 {
-    int largestValue = intArr[0];
+    constexpr int ArrSize = 12;
+    int IntArr[ArrSize]{ 0 };
 
-    for (int i = 1; i < arrSize; i++)
+    std::cout << "Array is ";
+    for (int i = 0; i < ArrSize; i++)
     {
-        if (intArr[i] > largestValue)
+        IntArr[i] = rand() % 100;
+        std::cout << IntArr[i];
+        if (i < ArrSize - 1)
         {
-            largestValue = intArr[i];
+            std::cout << ", ";
         }
     }
 
-    return largestValue;
+    std::cout << std::endl;
+
+    std::cout << "Largest value is " << LargestValue::FindLargestValue(IntArr, ArrSize);
 }

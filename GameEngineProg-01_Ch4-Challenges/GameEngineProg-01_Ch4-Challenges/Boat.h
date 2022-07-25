@@ -4,7 +4,7 @@
 class Boat : public Vehicle
 {
 private:
-	bool bIsAfloat = true;
+	bool bIsAfloat_ = true;
 
 public:
 	Boat(std::string brand, int year = 1900, float miles = 0.0f, bool isAfloat = true);
