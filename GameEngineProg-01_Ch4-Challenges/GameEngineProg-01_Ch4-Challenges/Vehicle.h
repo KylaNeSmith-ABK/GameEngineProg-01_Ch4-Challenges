@@ -11,7 +11,7 @@ protected:
 
 public:
 	Vehicle(std::string brand, int year = 1900, float miles = 0.0f);
-	~Vehicle();
+	virtual ~Vehicle();
 	
 	void Travel(float distance);
 
